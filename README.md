@@ -1,6 +1,6 @@
 ---
 subject : "Browser Extensions"
-title : "Browser ectension Copilot2Markdown"
+title : "Browser extension Copilot2Markdown"
 subtitle : "MS Copilot → Markdown"
 author : "ITSC IT Systems Consulting GmbH"
 abstract: "Exports Copilot chats into Markdown documents."
