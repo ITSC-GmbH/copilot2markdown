@@ -1,18 +1,18 @@
 ---
-title: Browser-Erweiterung Copilot2Markdown
-subtitle: MS Copilot → Markdown
-lang: en_US
+subject : "Browser Extensions"
+title : "Browser ectension Copilot2Markdown"
+subtitle : "MS Copilot → Markdown"
+author : "ITSC IT Systems Consulting GmbH"
+abstract: "Exports Copilot chats into Markdown documents."
+keywords: ["Copilot", "Markdown"]
+lang: "en"
 ---
 
-Exportiert Copilot-Chats als Markdown.
-
-<u>Language / Sprache:</u>
+Language / Sprache:
 
 - 🇬🇧 English
 
 - 🇩🇪 [Deutsch](./README.de.md)
-
-[TOC]
 
 # Overview
 
