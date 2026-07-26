@@ -1,56 +1,70 @@
 ---
 title: Browser-Erweiterung Copilot2Markdown
 subtitle: MS Copilot → Markdown
+lang: en_US
 ---
 
 Exportiert Copilot-Chats als Markdown.
 
-# Überblick
+<u>Language / Sprache:</u>
 
-Erstellt aus einem Copilot-Chat eine Markdown-Datei im GFM-Stil.
+- 🇬🇧 English
 
-Der Export wird entweder durch Klick auf das Erweiterungssymbol oder über den Eintrag `Copilot → Markdown ...` im Kontextmenü angestoßen.
+- 🇩🇪 [Deutsch](./README.de.md)
 
-Die Erweiterung ist im jeweiligen "Erweiterungs-Shop" für folgende Browser verfügbar:
+# Overview
+
+Creates a GFM-style Markdown file from a Copilot chat.
+
+The export is triggered either by clicking the extension icon or via the `Copilot → Markdown ...` entry in the context menu.
+
+The extension is available in the respective “extension store” for the following browsers:
 
 - Chromium / Google Chrome
 - Firefox
-- Die Chromium-Erweiterung funktioniert zwar auch mit MS Edge, ist aber im MS-Shop derzeit nicht vorhanden.
+- Although the Chromium extension also works with MS Edge, it is not currently available in the MS Store.
 
-Die Erweiterung unterstützt derzeit folgende Copilot-Varianten:
+The extension currently supports the following Copilot versions:
 
   - [m365 Copilot: https://m365.cloud.microsoft](https://m365.cloud.microsoft)
   - [MS Copilot: https://copilot.microsoft.com](https://copilot.microsoft.com)
 
-# Funktionsumfang
+# Features
 
-Der erstellte Markdown-Code übernimmt mit kleinen Ausnahmen (s. u.) sämtliche Inhalte und Formatierungen des Chat:
+With a few exceptions (see below), the generated Markdown code preserves all content and formatting from the chat:
 
-  - Überschriften
-  - Listen und Aufzählungen, mit Struktur
-  - Zitate
-  - Tabellen
-  - Inline-Code und Code-Blöcke
+  - Headings
+  - Lists and bulleted lists, with structure
+  - Quotes
+  - Tables
+  - Inline code and code blocks
   - Links
-  - Bilder. Auch eingebettete Bilder; für jedes Bild erfolgt hier nach dem Download der Markdown-Datei nochmals automatisch ein Download der Bild-Datei. **Achtung, Namen der Bild-Dateien nicht ändern, sonst findet sie der Markdown-Code nicht!**
+  - Images. This includes embedded images; for each image, the image file is automatically downloaded before the Markdown file is downloaded. **Warning: Do not change the names of the image files, otherwise the Markdown code will not be able to find them!**
 
-# Einschränkungen 
+# Limitations
 
-Was nicht exportiert wird:
+What is not exported:
 
-  - Quellenverweise im "neuen" (Juli 2026) Layout von m365-Copilot bestehen aus einem `button`, der per Javascript in der Seitenleiste die URLs anzeigt. Dies kann die Erweiterung nicht analysieren, die Quellenverweise gehen verloren.
-  - Trennlinien (`hr`) vor Überschriften werden absichtlich entfernt, da sie typografisch falsch sind und das Layout zerstören.
+  - Source references in the “new” (July 2026) layout of m365-Copilot consist of a `button` that displays the URLs in the sidebar via JavaScript. The extension cannot parse this, so the source references are lost.
+  - Horizontal rules (`hr`) before headings are intentionally removed because they are typographically incorrect and disrupt the layout.
 
-# Bitte beachten
+# Please note
 
-  1. Die Copilot Web-Oberfläche lädt bei umfangreicheren Chats manchmal nur einen Teil des Chats in den Browser; beim Blättern oder Scrollen werden die nun sichtbaren Teile nachgeladen, die nicht mehr sichtbaren jedoch aus dem Speicher des Browsers (DOM) entfernt. **Diese Erweiterung kann nur die Teile exportieren, die momentan geladen sind. Sie müssen für einen ganzen Chat deshalb eventuell mehrere Exports durchführen.**
-    2. Microsoft ändert ständig den Aufbau der Copilot-Seite. Obwohl ich mich bemüht habe, den Export möglichst unabhängig von der Struktur, den verwendeten CSS-Klassen usw. zu halten, kann es sein, dass die Erweiterung nach einer Änderung durch Microsoft manche Inhalte nicht mehr korrekt formatiert oder gar nicht findet.
-       **Bitte erstellen Sie in einem solchen Fall wie [unten beschrieben](#probleme-und-änderungswünsche) ein Ticket, ich werde mich bemühen, die Erweiterung so schnell es geht anzupassen.**
+1. For longer chats, the Copilot web interface sometimes loads only a portion of the chat into the browser; when you scroll, the now-visible parts are reloaded, but the parts that are no longer visible are removed from the browser’s memory (DOM). **This extension can only export the parts that are currently loaded. You may therefore need to perform multiple exports for a single chat.**
+2. Microsoft is constantly changing the structure of the Copilot page. Although I’ve tried to make the export as independent as possible from the structure, the CSS classes used, etc., it’s possible that after a change by Microsoft, the extension may no longer format some content correctly or may not find it at all.
+  **In such cases, please create a ticket as [described below](#problems-and-feature-requests); I will do my best to update the extension as soon as possible.**
+3. If you are a programmer yourself, you can customize the source code on your own (see the section ["Source Code Availability"](#source-code-availability)); this is usually limited to adjusting CSS selectors in the `CONFIG` section. I would appreciate it if you could send me the changes in a ticket (e.g., as a `diff`); I can then incorporate them into the extension packages available in the shops.
 
-# Probleme und Änderungswünsche
+# Issues and Feature Requests
 
-- Bei Problemen oder Änderungswünschen erstellen Sie ein Ticket im Github-Projekt `copilot2markdown`:
+- If you encounter any issues or have feature requests, please open a ticket in the GitHub project `copilot2markdown`:
   [https://github.com/ITSC-GmbH/copilot2markdown](https://github.com/ITSC-GmbH/copilot2markdown)
-- Prüfen Sie zuvor, ob bereits ein anderes Ticket zum selben Thema existiert.
-- Geben Sie unbedingt an, ob m365 oder MS Copilot betroffen sind; diese beiden basieren auf einer völlig unterschiedlichen Seitenstruktur.
-- Bei Fehlern beschreiben Sie, wie das Problem nachvollzogen werden kann; Screenshots und der fehlerhafte Markdown-Export sind hilfreich.
+- Please check first to see if another ticket on the same topic already exists.
+- Be sure to specify whether m365 or MS Copilot is affected; these two are based on completely different page structures.
+- For bugs, describe how the issue can be reproduced; screenshots and the faulty Markdown export are helpful.
+
+# Source Code Availability
+
+The source code for each release is freely available; you can download it from the GitHub project page in the [“Releases”](https://github.com/ITSC-GmbH/copilot2markdown/releases) section.
+
+The code is licensed under the MIT License - which means you can do whatever you want with it, as long as you do not remove my copyright notices or the license text itself.
