@@ -12,6 +12,8 @@ Exportiert Copilot-Chats als Markdown.
 
 - 🇩🇪 [Deutsch](./README.de.md)
 
+[TOC]
+
 # Overview
 
 Creates a GFM-style Markdown file from a Copilot chat.
