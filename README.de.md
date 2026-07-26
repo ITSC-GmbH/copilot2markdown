@@ -1,7 +1,11 @@
 ---
-title: Browser-Erweiterung Copilot2Markdown
-subtitle: MS Copilot → Markdown
-lang: de
+subject : "Browser-Erweiterungen"
+title : "Browser-Erweiterung Copilot2Markdown"
+subtitle : "MS Copilot → Markdown"
+author : "ITSC IT Systems Consulting GmbH"
+abstract: "Exportiert Copilot-Chats in Markdown-Dokumente."
+keywords: ["Copilot", "Markdown"]
+lang: "de"
 ---
 
 Exportiert Copilot-Chats als Markdown.
@@ -44,10 +48,10 @@ Was nicht exportiert wird:
 
 # Bitte beachten
 
-    1. Die Copilot Web-Oberfläche lädt bei umfangreicheren Chats manchmal nur einen Teil des Chats in den Browser; beim Blättern oder Scrollen werden die nun sichtbaren Teile nachgeladen, die nicht mehr sichtbaren jedoch aus dem Speicher des Browsers (DOM) entfernt. **Diese Erweiterung kann nur die Teile exportieren, die momentan geladen sind. Sie müssen für einen ganzen Chat deshalb eventuell mehrere Exports durchführen.**
-     2. Microsoft ändert ständig den Aufbau der Copilot-Seite. Obwohl ich mich bemüht habe, den Export möglichst unabhängig von der Struktur, den verwendeten CSS-Klassen usw. zu halten, kann es sein, dass die Erweiterung nach einer Änderung durch Microsoft manche Inhalte nicht mehr korrekt formatiert oder gar nicht findet.
-       **Bitte erstellen Sie in einem solchen Fall wie [unten beschrieben](#probleme-und-änderungswünsche) ein Ticket, ich werde mich bemühen, die Erweiterung so schnell es geht anzupassen.**
-     3. Sind Sie selbst Programmierer, können Sie den Quellcode selbst anpassen (siehe Abschnitt ["Verfügbarkeit des Quellcodes"](#verfügbarkeit-des-quellcodes)); in der Regel beschränkt sich dies auf die Anpassung von CSS Selektoren im `CONFIG`-Abschnitt. Ich wäre Ihnen dankbar, wenn Sie mir die Anpassungen in einem Ticket zukommen lassen (z. B. als `diff`); ich kann dies dann in die Erweiterungspakete in den Shops übernehmen.
+1. Die Copilot Web-Oberfläche lädt bei umfangreicheren Chats manchmal nur einen Teil des Chats in den Browser; beim Blättern oder Scrollen werden die nun sichtbaren Teile nachgeladen, die nicht mehr sichtbaren jedoch aus dem Speicher des Browsers (DOM) entfernt. **Diese Erweiterung kann nur die Teile exportieren, die momentan geladen sind. Sie müssen für einen ganzen Chat deshalb eventuell mehrere Exports durchführen.**
+2. Microsoft ändert ständig den Aufbau der Copilot-Seite. Obwohl ich mich bemüht habe, den Export möglichst unabhängig von der Struktur, den verwendeten CSS-Klassen usw. zu halten, kann es sein, dass die Erweiterung nach einer Änderung durch Microsoft manche Inhalte nicht mehr korrekt formatiert oder gar nicht findet.
+**Bitte erstellen Sie in einem solchen Fall wie [unten beschrieben](#probleme-und-änderungswünsche) ein Ticket, ich werde mich bemühen, die Erweiterung so schnell es geht anzupassen.**
+3. Sind Sie selbst Programmierer, können Sie den Quellcode selbst anpassen (siehe Abschnitt ["Verfügbarkeit des Quellcodes"](#verfügbarkeit-des-quellcodes)); in der Regel beschränkt sich dies auf die Anpassung von CSS Selektoren im `CONFIG`-Abschnitt. Ich wäre Ihnen dankbar, wenn Sie mir die Anpassungen in einem Ticket zukommen lassen (z. B. als `diff`); ich kann dies dann in die Erweiterungspakete in den Shops übernehmen.
 
 # Probleme und Änderungswünsche
 
