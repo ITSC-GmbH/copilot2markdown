@@ -1,0 +1,104 @@
+name: Feature Request
+description: Suggest an improvement or new functionality
+title: "[Feature]: "
+labels:
+  - enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide sufficient details so the request can be evaluated.
+
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension Version
+      description: Version currently in use
+      placeholder: 6.2.2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-browsers
+    attributes:
+      label: Affected Browsers
+      description: Select applicable browsers
+      multiple: true
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - Mozilla Firefox
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: copilot-url
+    attributes:
+      label: Copilot URL
+      description: URL where the requested functionality is needed
+      placeholder: https://...
+      multiple: true
+      options:
+        - m365 Copilot (https://m365.cloud.microsoft)
+        - MS Copilot (https://copilot.microsoft.com)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem are you currently facing?
+      placeholder: Describe the problem or limitation
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your proposed feature
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe alternative solutions or workarounds
+
+  - type: textarea
+    id: business-value
+    attributes:
+      label: Expected Benefit
+      description: Why is this feature useful?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Business Priority
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Mockups, screenshots, examples, links, etc.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched for existing feature requests before creating this request.
+          required: true
