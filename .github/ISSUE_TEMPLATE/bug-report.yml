@@ -1,0 +1,104 @@
+name: Bug Report
+description: Report a defect or unexpected behavior
+title: "[Bug]: "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide all required information so the issue can be investigated efficiently.
+
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension Version
+      description: Version of the browser extension
+      placeholder: 6.2.2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-browsers
+    attributes:
+      label: Affected Browsers
+      description: Select all browsers where the issue occurs
+      multiple: true
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - Mozilla Firefox
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: copilot-url
+    attributes:
+      label: Copilot URL
+      description: URL where the issue occurred
+      multiple: true
+      options:
+        - m365 Copilot (https://m365.cloud.microsoft)
+        - MS Copilot (https://copilot.microsoft.com)
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the problem
+      placeholder: Describe the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Explain how the issue can be reproduced
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs / Error Messages
+      description: Paste stack traces, console output or error messages if available
+      render: text
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Add screenshots if applicable
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched for existing issues before creating this report.
+          required: true
