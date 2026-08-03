@@ -19,11 +19,12 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     id: affected-browsers
     attributes:
       label: Affected Browsers
       description: Select all browsers where the issue occurs
+      multiple: true
       options:
         - label: Google Chrome
         - label: Microsoft Edge
