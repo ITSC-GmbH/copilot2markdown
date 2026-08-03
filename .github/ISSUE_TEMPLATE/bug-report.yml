@@ -24,7 +24,6 @@ body:
     attributes:
       label: Affected Browsers
       description: Select all browsers where the issue occurs
-      multiple: true
       options:
         - label: Google Chrome
         - label: Microsoft Edge
@@ -38,8 +37,8 @@ body:
       label: Copilot URL
       description: URL(s) where the issue occurred
       options:
-        - Label: m365 Copilot (https://m365.cloud.microsoft)
-        - Label: MS Copilot (https://copilot.microsoft.com)
+        - label: m365 Copilot (https://m365.cloud.microsoft)
+        - label: MS Copilot (https://copilot.microsoft.com)
     validations:
       required: true
 
