@@ -22,14 +22,29 @@ The export is triggered either by clicking the extension icon or via the `Copilo
 
 The extension is available in the respective “extension store” for the following browsers:
 
-- Chromium / Google Chrome
-- Firefox
-- Although the Chromium extension also works with MS Edge, it is not currently available in the MS Store.
+- Chromium / Google Chrome (im [Chrome Web Store](https://chromewebstore.google.com/))
+- Firefox ([Mozilla Add-On Store](https://addons.mozilla.org))
+- MS Edge[^1]. However, the extension must be installed from the [Chrome Web Store](https://chromewebstore.google.com/).
 
 The extension currently supports the following Copilot versions:
 
   - [m365 Copilot: https://m365.cloud.microsoft](https://m365.cloud.microsoft)
   - [MS Copilot: https://copilot.microsoft.com](https://copilot.microsoft.com)
+
+*Unlike similar extensions, no external services are used; conversion takes place entirely locally on your computer - your data remains 100% with you.*
+
+[^1]: see ["Problems with Microsoft Edge version 150" ](#problems-with-microsoft-edge-version-150)
+
+> [!CAUTION]
+>
+> ### *Problems with Microsoft Edge version 150*
+>
+> *Problems with Microsoft Edge version 150*
+>
+> *In Edge version 150, Microsoft arbitrarily - and without any documentation - implemented restrictions for `*.cloud.microsoft`, `copilot.microsoft.com`, `www.microsoft365.com`, and other domains that block <u>all</u> extensions on these pages!*
+> *See discussion here: [Bug - Edge Addons: All extensions are blocked on \*.cloud.microsoft starting in Edge ≥150 with no override #644](https://github.com/microsoft/MicrosoftEdge-Extensions/issues/644)*
+>
+> *This is reportedly set to be changed back in Edge version 152, but I have been unable to find an official statement from Microsoft regarding this.*
 
 # Features
 
