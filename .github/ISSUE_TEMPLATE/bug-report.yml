@@ -32,14 +32,15 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     id: copilot-url
     attributes:
       label: Copilot URL
-      description: URL(s) where the issue occurred
+      description: Select all Copilot types where the issue occurred
+      multiple: true
       options:
-        - label: m365 Copilot (https://m365.cloud.microsoft)
-        - label: MS Copilot (https://copilot.microsoft.com)
+        - m365 Copilot (https://m365.cloud.microsoft)
+        - MS Copilot (https://copilot.microsoft.com)
     validations:
       required: true
 
