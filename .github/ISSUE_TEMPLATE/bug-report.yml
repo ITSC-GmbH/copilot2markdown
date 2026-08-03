@@ -26,9 +26,9 @@ body:
       description: Select all browsers where the issue occurs
       multiple: true
       options:
-        - label: Google Chrome
-        - label: Microsoft Edge
-        - label: Mozilla Firefox
+        - Google Chrome
+        - Microsoft Edge
+        - Mozilla Firefox
     validations:
       required: true
 
