@@ -19,30 +19,26 @@ body:
     validations:
       required: true
 
-  - type: dropdown
+  - type: checkboxes
     id: affected-browsers
     attributes:
       label: Affected Browsers
-      description: Select applicable browsers
-      multiple: true
+      description: Select all applicable browsers
       options:
-        - Google Chrome
-        - Microsoft Edge
-        - Mozilla Firefox
-        - Other
+        - label: Google Chrome
+        - label: Microsoft Edge
+        - label: Mozilla Firefox
     validations:
       required: true
 
-  - type: input
+  - type: checkboxes
     id: copilot-url
     attributes:
       label: Copilot URL
-      description: URL where the requested functionality is needed
-      placeholder: https://...
-      multiple: true
+      description: URL(s) where the requested functionality is needed
       options:
-        - m365 Copilot (https://m365.cloud.microsoft)
-        - MS Copilot (https://copilot.microsoft.com)
+        - label: m365 Copilot (https://m365.cloud.microsoft)
+        - label: MS Copilot (https://copilot.microsoft.com)
     validations:
       required: true
 
