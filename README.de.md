@@ -18,14 +18,29 @@ Der Export wird entweder durch Klick auf das Erweiterungssymbol oder über den E
 
 Die Erweiterung ist im jeweiligen "Erweiterungs-Shop" für folgende Browser verfügbar:
 
-- Chromium / Google Chrome
-- Firefox
-- Die Chromium-Erweiterung funktioniert zwar auch mit MS Edge, ist aber im MS-Shop derzeit nicht vorhanden.
+- Chromium / Google Chrome (im [Chrome Web Store](https://chromewebstore.google.com/))
+- Firefox ([Mozilla Add-On Store](https://addons.mozilla.org))
+- MS Edge[^1]. Die Erweiterung muss allerdings aus dem [Chrome Web Store](https://chromewebstore.google.com/) installiert werden.
 
-Die Erweiterung unterstützt derzeit folgende Copilot-Varianten:
+Folgende Copilot-Varianten werden derzeit unterstützt:
 
   - [m365 Copilot: https://m365.cloud.microsoft](https://m365.cloud.microsoft)
   - [MS Copilot: https://copilot.microsoft.com](https://copilot.microsoft.com)
+
+*Ungleich ähnlichen Erweiterungen werden keine externen Dienste verwendet, die Konvertierung erfolgt ausschließlich lokal auf dem Rechner - Ihre Daten bleiben zu 100% bei Ihnen.*
+
+[^1]: siehe ["Probleme mit Microsoft Edge Version 150"](#probleme-mit-microsoft-edge-version-150)
+
+> [!caution]
+>
+> ### *Probleme mit Microsoft Edge Version 150*
+>
+> *Microsoft hat in Edge Version 150 willkürlich und ohne dies zu dokumentieren Sperren für alle `*.cloud.microsoft`, `copilot.microsoft.com`, `www.microsoft365.com` und andere eingebaut, die **<u>jegliche</u>** Erweiterung auf diesen Seiten blockiert!*
+> *Siehe Diskussion hier: [Bug - Edge Addons: All extensions are blocked on \*.cloud.microsoft starting in Edge ≥150 with no override #644](https://github.com/microsoft/MicrosoftEdge-Extensions/issues/644)*
+>
+> *Angeblich soll dies in Edge Version 152 wieder geändert werden, aber ein offizielles Statement von MS hierzu konnte ich nirgends finden.*
+>
+> *Bis dahin ist die einzige Lösung, auf Version 149 zurückzugehen, um wieder Erweiterungen auf Microsoft-Seiten nutzen zu können - oder einfach auf Chromium oder Firefox umzusteigen.*
 
 # Funktionsumfang
 
