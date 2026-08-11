@@ -31,16 +31,14 @@ Folgende Copilot-Varianten werden derzeit unterstützt:
 
 [^1]: siehe ["Probleme mit Microsoft Edge Version 150"](#probleme-mit-microsoft-edge-version-150)
 
-> [!caution]
+> [!note]
 >
 > ### *Probleme mit Microsoft Edge Version 150*
 >
 > *Microsoft hat in Edge Version 150 willkürlich und ohne dies zu dokumentieren Sperren für alle `*.cloud.microsoft`, `copilot.microsoft.com`, `www.microsoft365.com` und andere eingebaut, die **<u>jegliche</u>** Erweiterung auf diesen Seiten blockiert!*
 > *Siehe Diskussion hier: [Bug - Edge Addons: All extensions are blocked on \*.cloud.microsoft starting in Edge ≥150 with no override #644](https://github.com/microsoft/MicrosoftEdge-Extensions/issues/644)*
 >
-> *Angeblich soll dies in Edge Version 152 wieder geändert werden, aber ein offizielles Statement von MS hierzu konnte ich nirgends finden.*
->
-> *Bis dahin ist die einzige Lösung, auf Version 149 zurückzugehen, um wieder Erweiterungen auf Microsoft-Seiten nutzen zu können - oder einfach auf Chromium oder Firefox umzusteigen.*
+> *Aktualisieren Sie auf Version 151 oder gehen auf die Version 149 zurück, um Erweiterungen auf Microsoft-Seiten nutzen zu können - oder einfach auf Chromium oder Firefox umsteigen.*
 
 # Funktionsumfang
 
@@ -54,12 +52,15 @@ Der erstellte Markdown-Code übernimmt mit kleinen Ausnahmen (s. u.) sämtliche 
   - Links
   - Bilder. Auch eingebettete Bilder; für jedes Bild erfolgt hier nach dem Download der Markdown-Datei nochmals automatisch ein Download der Bild-Datei. **Achtung, Namen der Bild-Dateien nicht ändern, sonst findet sie der Markdown-Code nicht!**
 
+# Optionale Funktionen
+
+Der Exporter kann diverse Dinge wie horizontale Trennlinien, harte Kapitelnummerierung und Emojis in Überschriften beseitigen und die Überschriftenhierachie korrigieren. Sehen Sie sich hierzu die Online-Hilfe im Einstellungsdialog der Erweiterung an.
+
 # Einschränkungen 
 
 Was nicht exportiert wird:
 
   - Quellenverweise im "neuen" (Juli 2026) Layout von m365-Copilot bestehen aus einem `button`, der per Javascript in der Seitenleiste die URLs anzeigt. Dies kann die Erweiterung nicht analysieren, die Quellenverweise gehen verloren.
-  - Trennlinien (`hr`) vor Überschriften werden absichtlich entfernt, da sie typografisch falsch sind und das Layout zerstören.
 
 # Bitte beachten
 
