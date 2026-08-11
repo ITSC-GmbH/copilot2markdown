@@ -35,7 +35,7 @@ The extension currently supports the following Copilot versions:
 
 [^1]: see ["Problems with Microsoft Edge version 150" ](#problems-with-microsoft-edge-version-150)
 
-> [!CAUTION]
+> [!note]
 >
 > ### *Problems with Microsoft Edge version 150*
 >
@@ -44,7 +44,7 @@ The extension currently supports the following Copilot versions:
 > *In Edge version 150, Microsoft arbitrarily - and without any documentation - implemented restrictions for `*.cloud.microsoft`, `copilot.microsoft.com`, `www.microsoft365.com`, and other domains that block <u>all</u> extensions on these pages!*
 > *See discussion here: [Bug - Edge Addons: All extensions are blocked on \*.cloud.microsoft starting in Edge ≥150 with no override #644](https://github.com/microsoft/MicrosoftEdge-Extensions/issues/644)*
 >
-> *This is reportedly set to be changed back in Edge version 152, but I have been unable to find an official statement from Microsoft regarding this.*
+> *Update to version 151 or revert to version 149 to use extensions on Microsoft sites - or simply switch to Chromium or Firefox.*
 
 # Features
 
@@ -58,12 +58,15 @@ With a few exceptions (see below), the generated Markdown code preserves all con
   - Links
   - Images. This includes embedded images; for each image, the image file is automatically downloaded before the Markdown file is downloaded. **Warning: Do not change the names of the image files, otherwise the Markdown code will not be able to find them!**
 
+# Optional features
+
+The exporter can remove elements such as horizontal rules, hard-coded chapter numbering, and emojis from headings, as well as correct the heading hierarchy. Please consult the online help in the extension's settings dialog for details.
+
 # Limitations
 
 What is not exported:
 
   - Source references in the “new” (July 2026) layout of m365-Copilot consist of a `button` that displays the URLs in the sidebar via JavaScript. The extension cannot parse this, so the source references are lost.
-  - Horizontal rules (`hr`) before headings are intentionally removed because they are typographically incorrect and disrupt the layout.
 
 # Please note
 
