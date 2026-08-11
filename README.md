@@ -70,7 +70,7 @@ What is not exported:
 1. For longer chats, the Copilot web interface sometimes loads only a portion of the chat into the browser; when you scroll, the now-visible parts are reloaded, but the parts that are no longer visible are removed from the browser’s memory (DOM). **This extension can only export the parts that are currently loaded. You may therefore need to perform multiple exports for a single chat.**
 2. Microsoft is constantly changing the structure of the Copilot page. Although I’ve tried to make the export as independent as possible from the structure, the CSS classes used, etc., it’s possible that after a change by Microsoft, the extension may no longer format some content correctly or may not find it at all.
   **In such cases, please create a ticket as [described below](#problems-and-feature-requests); I will do my best to update the extension as soon as possible.**
-3. If you are a programmer yourself, you can customize the source code on your own (see the section ["Source Code Availability"](#source-code-availability)); this is usually limited to adjusting CSS selectors in the `CONFIG` section. I would appreciate it if you could send me the changes in a ticket (e.g., as a `diff`); I can then incorporate them into the extension packages available in the shops.
+3. If you are a programmer yourself, you can customize the source code on your own (see the section ["Source Code Availability"](#source-code-availability)); this is usually limited to adjusting CSS selectors in the `CONFIGS` section of `content-config.js`. I would appreciate it if you could send me the changes in a ticket (e.g., as a `diff`); I can then incorporate them into the extension packages available in the shops.
 
 # Issues and Feature Requests
 
