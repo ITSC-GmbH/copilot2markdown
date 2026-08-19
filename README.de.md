@@ -8,7 +8,7 @@ keywords: ["Copilot", "Markdown"]
 lang: "de"
 ---
 
-Exportiert Copilot-Chats als Markdown.
+Exportiert Copilot Chats schön aufbereitet nach PDF, HTML und Markdown.
 
 # Überblick
 
