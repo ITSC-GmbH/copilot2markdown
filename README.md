@@ -14,7 +14,7 @@ Language / Sprache:
 
 - 🇩🇪 [Deutsch](./README.de.md)
 
-Exports Copilot chats as Markdown.
+Exports Copilot chats pretty formatted to PDF, HTML and Markdown.
 
 # Overview
 
@@ -93,7 +93,6 @@ The source code for each release is freely available; you can download it from t
 The code is licensed under the MIT License - meaning you are free to use it however you wish, provided you do not remove my copyright notices or the license description itself.
 
 However, this license does not extend to the included third-party components. Detailed information can be found in the `licenses` subdirectory.
-
 
 
 
