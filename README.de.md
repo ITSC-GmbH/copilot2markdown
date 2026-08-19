@@ -12,33 +12,30 @@ Exportiert Copilot-Chats als Markdown.
 
 # Überblick
 
-Erstellt aus einem Copilot-Chat eine Markdown-Datei im GFM-Stil.
+Leider sind die Möglichkeiten der Copilot-Oberfläche extrem limitiert, wenn es darum geht, Chats zu archivieren oder weiterzubearbeiten. Lediglich die aktuelle Dialogrund kann nach Word oder Pages exportiert werden - und das nicht einmal besonders hübsch.
 
-Der Export wird entweder durch Klick auf das Erweiterungssymbol oder über den Eintrag `Copilot → Markdown ...` im Kontextmenü angestoßen.
+Hier springt "MS Copilot → Pretty Exporter" in die Bresche, bereitet die Copilot Chats auf und exportiert sie nach PDF, HTML und Markdown. Auch eine WYSIWYG-Vorschau der Dokumente direkt in der Erweiterung ist vorhanden, in der Sie die Dokumente sogar vorab bearbeiten, Notizen hinzufügen oder ungewünschte Passagen entfernen können.
 
-Die Erweiterung ist im jeweiligen "Erweiterungs-Shop" für folgende Browser verfügbar:
+*Ungleich ähnlichen Erweiterungen werden keine externen Dienste verwendet, die Konvertierung erfolgt ausschließlich lokal auf dem Rechner - Ihre Daten bleiben zu 100% bei Ihnen.*
 
-- Chromium / Google Chrome (im [Chrome Web Store](https://chromewebstore.google.com/))
-- Firefox ([Mozilla Add-On Store](https://addons.mozilla.org))
-- MS Edge[^1]. Die Erweiterung muss allerdings aus dem [Chrome Web Store](https://chromewebstore.google.com/) installiert werden.
+## Schnellstart
 
-Folgende Copilot-Varianten werden derzeit unterstützt:
+Installieren Sie die Erweiterung und gehen auf die Copilot-Seite Iher Wahl, entweder m365-Copilot oder MS-Copilot:
 
   - [m365 Copilot: https://m365.cloud.microsoft](https://m365.cloud.microsoft)
   - [MS Copilot: https://copilot.microsoft.com](https://copilot.microsoft.com)
 
-*Ungleich ähnlichen Erweiterungen werden keine externen Dienste verwendet, die Konvertierung erfolgt ausschließlich lokal auf dem Rechner - Ihre Daten bleiben zu 100% bei Ihnen.*
+Probieren Sie es dann mit einer Aufgabe wie dieser:
 
-[^1]: siehe ["Probleme mit Microsoft Edge Version 150"](#probleme-mit-microsoft-edge-version-150)
+> "Erstelle eine Ausgabe, die die Möglichkeiten der Copilot-Oberfläche demonstriert. Das heißt, eine Ausgabe mit einer Überschriften-Hierarchie, mit Aufzählungen, Nummerierungen, Checklisten, Zitaten, Tabellen und Codeblöcken. Erzeuge ein hübsches, zu dieser Aufgabe passendes Logo und zeige es als Titel der Ausgabe an."
 
-> [!note]
->
-> ### *Probleme mit Microsoft Edge Version 150*
->
-> *Microsoft hat in Edge Version 150 willkürlich und ohne dies zu dokumentieren Sperren für alle `*.cloud.microsoft`, `copilot.microsoft.com`, `www.microsoft365.com` und andere eingebaut, die **<u>jegliche</u>** Erweiterung auf diesen Seiten blockiert!*
-> *Siehe Diskussion hier: [Bug - Edge Addons: All extensions are blocked on \*.cloud.microsoft starting in Edge ≥150 with no override #644](https://github.com/microsoft/MicrosoftEdge-Extensions/issues/644)*
->
-> *Aktualisieren Sie auf Version 151 oder gehen auf die Version 149 zurück, um Erweiterungen auf Microsoft-Seiten nutzen zu können - oder einfach auf Chromium oder Firefox umsteigen.*
+Rufen Sie aus dem Kontextmenü heraus "MS Copilot → Pretty Exporter" / "Vorschau & Bearbeitung ..." und schauen sich dort die Möglichkeiten der "Toolbar-Buttons" an. Versuchen Sie auch den Button "Einstellungen" - alle Einstellungen sind ausführlich in der Online-Hilfe dokumentiert und geben Ihnen einen Einblick in die Möglichkeiten.
+
+## Funktionsprinzip
+
+Die Copilot-Webseite wird von der Erweiterung analysiert, aufbereitet und bereinigt und in das Markdown-Format übersetzt. Markdown ist auf der einen Seite so simpel, dass es mit jedem beliebigen Texteditor bearbeitet werden kann, auf der anderen Seite so leistungsfähig, das  es auch für professionelle Bücher und Präsentationen genutzt wird.
+
+Aus dem Markdown-Dokument erzeugt die Erweiterung anschließend Vorschau, PDF- und HTML-Dateien.
 
 # Funktionsumfang
 
@@ -52,13 +49,17 @@ Der erstellte Markdown-Code übernimmt mit kleinen Ausnahmen (s. u.) sämtliche 
   - Links
   - Bilder. Auch eingebettete Bilder; für jedes Bild erfolgt hier nach dem Download der Markdown-Datei nochmals automatisch ein Download der Bild-Datei. **Achtung, Namen der Bild-Dateien nicht ändern, sonst findet sie der Markdown-Code nicht!**
 
-# Optionale Funktionen
+Die Erweiterung ist im jeweiligen "Erweiterungs-Shop" für folgende Browser verfügbar:
 
-Der Exporter kann diverse Dinge wie horizontale Trennlinien, harte Kapitelnummerierung und Emojis in Überschriften beseitigen und die Überschriftenhierachie korrigieren. Sehen Sie sich hierzu die Online-Hilfe im Einstellungsdialog der Erweiterung an.
+- Chromium / Google Chrome (im [Chrome Web Store](https://chromewebstore.google.com/))
+- Firefox ([Mozilla Add-On Store](https://addons.mozilla.org))
+- MS Edge[^1]. Die Erweiterung muss allerdings aus dem [Chrome Web Store](https://chromewebstore.google.com/) installiert werden.
+
+[^1]: MS Edge Version 150 ist fehlerhaft und erlaubt keinerlei Erweiterungen für Microsoft-seiten wie Copilot. Verwenden Sie unbedingt eine neuere oder ältere Version oder einen anderen Browser.
 
 # Einschränkungen 
 
-Was nicht exportiert wird:
+Was derzeit nicht exportiert werden kann:
 
   - Quellenverweise im "neuen" (Juli 2026) Layout von m365-Copilot bestehen aus einem `button`, der per Javascript in der Seitenleiste die URLs anzeigt. Dies kann die Erweiterung nicht analysieren, die Quellenverweise gehen verloren.
 
@@ -67,7 +68,7 @@ Was nicht exportiert wird:
 1. Die Copilot Web-Oberfläche lädt bei umfangreicheren Chats manchmal nur einen Teil des Chats in den Browser; beim Blättern oder Scrollen werden die nun sichtbaren Teile nachgeladen, die nicht mehr sichtbaren jedoch aus dem Speicher des Browsers (DOM) entfernt. **Diese Erweiterung kann nur die Teile exportieren, die momentan geladen sind. Sie müssen für einen ganzen Chat deshalb eventuell mehrere Exports durchführen.**
 2. Microsoft ändert ständig den Aufbau der Copilot-Seite. Obwohl ich mich bemüht habe, den Export möglichst unabhängig von der Struktur, den verwendeten CSS-Klassen usw. zu halten, kann es sein, dass die Erweiterung nach einer Änderung durch Microsoft manche Inhalte nicht mehr korrekt formatiert oder gar nicht findet.
 **Bitte erstellen Sie in einem solchen Fall wie [unten beschrieben](#probleme-und-änderungswünsche) ein Ticket, ich werde mich bemühen, die Erweiterung so schnell es geht anzupassen.**
-3. Sind Sie selbst Programmierer, können Sie den Quellcode selbst anpassen (siehe Abschnitt ["Verfügbarkeit des Quellcodes"](#verfügbarkeit-des-quellcodes)); in der Regel beschränkt sich dies auf die Anpassung von CSS Selektoren im `CONFIGS`-Abschnitt von `content-config.js`. Ich wäre Ihnen dankbar, wenn Sie mir die Anpassungen in einem Ticket zukommen lassen (z. B. als `diff`); ich kann dies dann in die Erweiterungspakete in den Shops übernehmen.
+3. Sind Sie selbst Programmierer, können Sie den Quellcode selbst anpassen (siehe Abschnitt ["Verfügbarkeit des Quellcodes"](#verfügbarkeit-des-quellcodes)); in der Regel beschränkt sich dies auf die Anpassung von CSS Selektoren im `CONFIGS`-Abschnitt von `export-config.js`. Ich wäre Ihnen dankbar, wenn Sie mir die Anpassungen in einem Ticket zukommen lassen (z. B. als `diff`); ich kann dies dann in die Erweiterungspakete in den Shops übernehmen.
 
 # Probleme und Änderungswünsche
 
@@ -81,4 +82,8 @@ Was nicht exportiert wird:
 
 Der Quellcode jedes Releases steht frei zur Verfügung; Sie können ihn auf der GitHub-Projektseite im Abschnitt ["Releases"](https://github.com/ITSC-GmbH/copilot2markdown/releases) herunterladen.
 
+# Lizenz
+
 Der Code steht unter der MIT-Lizenz - das heißt, Sie können damit machen, was Sie wollen, sofern Sie meine Copyright-Hinweise und die Lizenzbeschreibung selbst nicht entfernen.
+
+Diese Lizenz erstreckt sich jedoch nicht auf die mitgelieferten Dritt-Partei-Komponenten. Genauere Informationen finden Sie im Unterverzeichnis `licenses`.
