@@ -12,7 +12,7 @@ Exportiert Copilot Chats schön aufbereitet nach PDF, HTML und Markdown.
 
 # Überblick
 
-Leider sind die Möglichkeiten der Copilot-Oberfläche extrem limitiert, wenn es darum geht, Chats zu archivieren oder weiterzubearbeiten. Lediglich die aktuelle Dialogrund kann nach Word oder Pages exportiert werden - und das nicht einmal besonders hübsch.
+Leider sind die Möglichkeiten der Copilot-Oberfläche extrem limitiert, wenn es darum geht, Chats zu archivieren oder weiterzubearbeiten. Lediglich die aktuelle Dialogrunde kann nach Word oder Pages exportiert werden - und das nicht einmal besonders hübsch.
 
 Hier springt "MS Copilot → Pretty Exporter" in die Bresche, bereitet die Copilot Chats auf und exportiert sie nach PDF, HTML und Markdown. Auch eine WYSIWYG-Vorschau der Dokumente direkt in der Erweiterung ist vorhanden, in der Sie die Dokumente sogar vorab bearbeiten, Notizen hinzufügen oder ungewünschte Passagen entfernen können.
 
