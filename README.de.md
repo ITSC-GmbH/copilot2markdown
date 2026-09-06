@@ -29,7 +29,7 @@ Probieren Sie es dann mit einer Aufgabe wie dieser:
 
 > "Erstelle eine Ausgabe, die die Möglichkeiten der Copilot-Oberfläche demonstriert. Das heißt, eine Ausgabe mit einer Überschriften-Hierarchie, mit Aufzählungen, Nummerierungen, Checklisten, Zitaten, Tabellen und Codeblöcken. Erzeuge ein hübsches, zu dieser Aufgabe passendes Logo und zeige es als Titel der Ausgabe an."
 
-Rufen Sie aus dem Kontextmenü heraus "MS Copilot → Pretty Exporter" / "Vorschau & Bearbeitung ..." und schauen sich dort die Möglichkeiten der "Toolbar-Buttons" an. Versuchen Sie auch den Button "Einstellungen" - alle Einstellungen sind ausführlich in der Online-Hilfe dokumentiert und geben Ihnen einen Einblick in die Möglichkeiten.
+Rufen Sie aus dem Kontextmenü heraus "MS Copilot → Pretty Exporter" / "Vorschau & Bearbeitung ..." und schauen sich dort die Möglichkeiten der "Toolbar-Buttons" an. Versuchen Sie auch den Menüeintrag "Einstellungen" - alle Einstellungen sind ausführlich in der Online-Hilfe dokumentiert und geben Ihnen einen Einblick in die Möglichkeiten.
 
 ## Funktionsprinzip
 
@@ -39,10 +39,10 @@ Aus dem Markdown-Dokument erzeugt die Erweiterung anschließend Vorschau, PDF- u
 
 # Funktionsumfang
 
-Der erstellte Markdown-Code übernimmt mit kleinen Ausnahmen (s. u.) sämtliche Inhalte und Formatierungen des Chat:
+Die erstellten Ausgaben übernehmen sämtliche Inhalte und Formatierungen des Chat:
 
   - Überschriften
-  - Listen und Aufzählungen, mit Struktur
+  - Listen, Aufzählungen und Checklisten, mit Hierarchie
   - Zitate
   - Tabellen
   - Inline-Code und Code-Blöcke
@@ -56,12 +56,6 @@ Die Erweiterung ist im jeweiligen "Erweiterungs-Shop" für folgende Browser verf
 - MS Edge[^1]. Die Erweiterung muss allerdings aus dem [Chrome Web Store](https://chromewebstore.google.com/) installiert werden.
 
 [^1]: MS Edge Version 150 ist fehlerhaft und erlaubt keinerlei Erweiterungen für Microsoft-seiten wie Copilot. Verwenden Sie unbedingt eine neuere oder ältere Version oder einen anderen Browser.
-
-# Einschränkungen 
-
-Was derzeit nicht exportiert werden kann:
-
-  - Quellenverweise im "neuen" (Juli 2026) Layout von m365-Copilot bestehen aus einem `button`, der per Javascript in der Seitenleiste die URLs anzeigt. Dies kann die Erweiterung nicht analysieren, die Quellenverweise gehen verloren.
 
 # Bitte beachten
 
