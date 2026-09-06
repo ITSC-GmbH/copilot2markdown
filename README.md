@@ -35,7 +35,7 @@ Then, try a task like this:
 
 > "Generate an output that demonstrates the capabilities of the Copilot interface. That means an output featuring a heading hierarchy, bullet points, numbered lists, check lists, quotes, tables, and code blocks. Create an attractive logo suited to this task and display it as the title of the output."
 
-Open the context menu, select "MS Copilot → Pretty Exporter" / "Preview & Edit ...", and explore the functions of the toolbar buttons. Also, try the "Settings" button - all settings are thoroughly documented in the online help, giving you insight into the available features.
+Open the context menu, select "MS Copilot → Pretty Exporter" / "Preview & Edit ...", and explore the functions of the toolbar buttons. Also, try the "Settings" menu item - all settings are thoroughly documented in the online help, giving you insight into the available features.
 
 ## How It Works
 
@@ -45,10 +45,10 @@ The extension then generates preview, PDF, and HTML files from the Markdown docu
 
 # Features
 
-With minor exceptions (see below), the generated Markdown code preserves all content and formatting from the chat:
+The generated outputs preserve all content and formatting from the chat:
 
 - Headings
-- Lists and bullet points (including structure)
+- Lists, bullet points and check lists (including structure)
 - Quotes
 - Tables
 - Inline code and code blocks
@@ -62,12 +62,6 @@ The extension is available in the respective extension stores for the following 
 - MS Edge[^1]. However, the extension must be installed from the [Chrome Web Store](https://chromewebstore.google.com/).
 
 [^1]: MS Edge version 150 is buggy and does not allow any extensions for Microsoft sites like Copilot. Please ensure you use a newer or older version, or a different browser.
-
-# Limitations
-
-Items that currently cannot be exported:
-
-- Source references in the "new" (July 2026) layout of M365 Copilot consist of a `button` that displays URLs in the sidebar via JavaScript. The extension cannot parse this, so the source references are lost.
 
 # Please note
 
