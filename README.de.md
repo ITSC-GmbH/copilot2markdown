@@ -23,7 +23,7 @@ Hier springt "MS Copilot → Pretty Exporter" in die Bresche, bereitet die Copil
 Installieren Sie die Erweiterung und gehen auf die Copilot-Seite Iher Wahl, entweder m365-Copilot oder MS-Copilot:
 
   - [m365 Copilot: https://m365.cloud.microsoft](https://m365.cloud.microsoft)
-  - [MS Copilot: https://copilot.microsoft.com](https://copilot.microsoft.com)
+  - [MS Copilot: https://copilot.com](https://copilot.com) (ehemals [https://copilot.microsoft.com](https://copilot.microsoft.com))
 
 Probieren Sie es dann mit einer Aufgabe wie dieser:
 
