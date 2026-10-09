@@ -29,7 +29,7 @@ This is where "MS Copilot → Pretty Exporter" steps in; it processes Copilot ch
 Install the extension and navigate to the Copilot site of your choice - either m365 Copilot or MS Copilot:
 
 - [M365 Copilot: https://m365.cloud.microsoft](https://m365.cloud.microsoft)
-- [MS Copilot: https://copilot.microsoft.com](https://copilot.microsoft.com)
+- [MS Copilot: https://copilot.com](https://copilot.com) (formerly [https://copilot.microsoft.com](https://copilot.microsoft.com))
 
 Then, try a task like this:
 
