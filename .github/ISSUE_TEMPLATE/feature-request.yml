@@ -14,21 +14,8 @@ body:
     id: extension-version
     attributes:
       label: Extension Version
-      description: Version currently in use
-      placeholder: 6.2.2
-    validations:
-      required: true
-
-  - type: dropdown
-    id: affected-browsers
-    attributes:
-      label: Affected Browsers
-      description: Select all applicable browsers
-      multiple: true
-      options:
-        - Google Chrome
-        - Microsoft Edge
-        - Mozilla Firefox
+      description: Version to enhance
+      placeholder: 9.0.0
     validations:
       required: true
 
@@ -40,58 +27,18 @@ body:
       multiple: true
       options:
         - label: m365 Copilot (https://m365.cloud.microsoft)
-        - label: MS Copilot (https://copilot.microsoft.com)
+        - label: MS Copilot (https://copilot.com, https://copilot.cloud.microsoft, https://copilot.microsoft.com)
     validations:
       required: true
 
   - type: textarea
-    id: problem
+    id: proposal
     attributes:
-      label: Problem Statement
-      description: What problem are you currently facing?
-      placeholder: Describe the problem or limitation
+      label: Describe your proposal
+      description: Improvement or new functionality to be added
+      placeholder: Describe your proposal
     validations:
       required: true
-
-  - type: textarea
-    id: proposed-solution
-    attributes:
-      label: Proposed Solution
-      description: Describe your proposed feature
-    validations:
-      required: true
-
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternatives Considered
-      description: Describe alternative solutions or workarounds
-
-  - type: textarea
-    id: business-value
-    attributes:
-      label: Expected Benefit
-      description: Why is this feature useful?
-    validations:
-      required: true
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Business Priority
-      options:
-        - Low
-        - Medium
-        - High
-        - Critical
-    validations:
-      required: true
-
-  - type: textarea
-    id: additional-context
-    attributes:
-      label: Additional Context
-      description: Mockups, screenshots, examples, links, etc.
 
   - type: checkboxes
     id: confirmation
