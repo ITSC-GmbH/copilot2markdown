@@ -1,14 +1,17 @@
 ---
 subject : "Browser-Erweiterungen"
-title : "Browser-Erweiterung Copilot2Markdown"
-subtitle : "MS Copilot → Markdown"
+title : "Browser-Erweiterung MS Copilot → Markdown"
+subtitle : "Projektbeschreibung"
 author : "ITSC IT Systems Consulting GmbH"
-abstract: "Exportiert Copilot-Chats in Markdown-Dokumente."
 keywords: ["Copilot", "Markdown"]
 lang: "de"
 ---
 
 Exportiert Copilot Chats schön aufbereitet nach PDF, HTML und Markdown.
+
+> [!tip]
+>
+> ***Neu in Version 8.x:** Exportieren Sie den vollständigen Copilot-Chat mit allen Dialogrunden - ganz egal, wie viele es sind!*
 
 # Überblick
 
@@ -20,7 +23,7 @@ Hier springt "MS Copilot → Pretty Exporter" in die Bresche, bereitet die Copil
 
 ## Schnellstart
 
-Installieren Sie die Erweiterung und gehen auf die Copilot-Seite Iher Wahl, entweder m365-Copilot oder MS-Copilot:
+Installieren Sie die Erweiterung und gehen auf die Copilot-Seite Ihrer Wahl, entweder m365-Copilot oder MS-Copilot:
 
   - [m365 Copilot: https://m365.cloud.microsoft](https://m365.cloud.microsoft)
   - [MS Copilot: https://copilot.com](https://copilot.com) (ehemals [https://copilot.microsoft.com](https://copilot.microsoft.com))
@@ -36,6 +39,10 @@ Rufen Sie aus dem Kontextmenü heraus "MS Copilot → Pretty Exporter" / "Vorsch
 Die Copilot-Webseite wird von der Erweiterung analysiert, aufbereitet und bereinigt und in das Markdown-Format übersetzt. Markdown ist auf der einen Seite so simpel, dass es mit jedem beliebigen Texteditor bearbeitet werden kann, auf der anderen Seite so leistungsfähig, das  es auch für professionelle Bücher und Präsentationen genutzt wird.
 
 Aus dem Markdown-Dokument erzeugt die Erweiterung anschließend Vorschau, PDF- und HTML-Dateien.
+
+Zur Vorbereitung eines Exports werden alle "Vorschau-Buttons" angeklickt, um Quellcodeblöcke und ähnliches sichtbar zu machen.
+
+Für einen vollen Export wird seitenweise durch den Chat gescrollt, die Seiteninhalte übernommen und zusammengefasst.
 
 # Funktionsumfang
 
@@ -53,16 +60,23 @@ Die Erweiterung ist im jeweiligen "Erweiterungs-Shop" für folgende Browser verf
 
 - Chromium / Google Chrome (im [Chrome Web Store](https://chromewebstore.google.com/))
 - Firefox ([Mozilla Add-On Store](https://addons.mozilla.org))
-- MS Edge[^1]. Die Erweiterung muss allerdings aus dem [Chrome Web Store](https://chromewebstore.google.com/) installiert werden.
+- MS Edge. Die Erweiterung muss allerdings aus dem [Chrome Web Store](https://chromewebstore.google.com/) installiert werden.
 
-[^1]: MS Edge Version 150 ist fehlerhaft und erlaubt keinerlei Erweiterungen für Microsoft-seiten wie Copilot. Verwenden Sie unbedingt eine neuere oder ältere Version oder einen anderen Browser.
+## Voller Export
+
+Die Copilot Web-Oberfläche lädt bei umfangreicheren Chats nur einen Teil des Chats in den Browser; beim Blättern oder Scrollen werden die nun sichtbaren Teile nachgeladen, die nicht mehr sichtbaren jedoch aus dem Speicher des Browsers (DOM) entfernt.
+
+Der einfache Export übernimmt nur diesen gerade geladenen Teil, was in vielen Fällen, zum Beispiel zum Probelesen, völlig ausreichend ist.
+
+Soll jedoch der ganze Chat zu Archivierungszwecken exportiert werden, dann muss der "volle Export" im Menü aufgerufen werden.
+
+Der volle Export scrollt den gesamten Chat seitenweise durch, kombiniert die einzelnen Seiteninhalte und entfernt durch einem komplexen Algorithmus Duplikate.
 
 # Bitte beachten
 
-1. Die Copilot Web-Oberfläche lädt bei umfangreicheren Chats manchmal nur einen Teil des Chats in den Browser; beim Blättern oder Scrollen werden die nun sichtbaren Teile nachgeladen, die nicht mehr sichtbaren jedoch aus dem Speicher des Browsers (DOM) entfernt. **Diese Erweiterung kann nur die Teile exportieren, die momentan geladen sind. Sie müssen für einen ganzen Chat deshalb eventuell mehrere Exports durchführen.**
-2. Microsoft ändert ständig den Aufbau der Copilot-Seite. Obwohl ich mich bemüht habe, den Export möglichst unabhängig von der Struktur, den verwendeten CSS-Klassen usw. zu halten, kann es sein, dass die Erweiterung nach einer Änderung durch Microsoft manche Inhalte nicht mehr korrekt formatiert oder gar nicht findet.
-**Bitte erstellen Sie in einem solchen Fall wie [unten beschrieben](#probleme-und-änderungswünsche) ein Ticket, ich werde mich bemühen, die Erweiterung so schnell es geht anzupassen.**
-3. Sind Sie selbst Programmierer, können Sie den Quellcode selbst anpassen (siehe Abschnitt ["Verfügbarkeit des Quellcodes"](#verfügbarkeit-des-quellcodes)); in der Regel beschränkt sich dies auf die Anpassung von CSS Selektoren im `CONFIGS`-Abschnitt von `export-config.js`. Ich wäre Ihnen dankbar, wenn Sie mir die Anpassungen in einem Ticket zukommen lassen (z. B. als `diff`); ich kann dies dann in die Erweiterungspakete in den Shops übernehmen.
+1. Microsoft ändert ständig den Aufbau der Copilot-Seite. Obwohl ich mich bemüht habe, den Export möglichst unabhängig von der Struktur, den verwendeten CSS-Klassen usw. zu halten, kann es sein, dass die Erweiterung nach einer Änderung durch Microsoft manche Inhalte nicht mehr korrekt formatiert oder gar nicht findet.
+  **Bitte erstellen Sie in einem solchen Fall wie [unten beschrieben](#probleme-und-änderungswünsche) ein Ticket, ich werde mich bemühen, die Erweiterung so schnell es geht anzupassen.**
+2. Sind Sie selbst Programmierer, können Sie den Quellcode selbst anpassen (siehe Abschnitt ["Verfügbarkeit des Quellcodes"](#verfügbarkeit-des-quellcodes)); in der Regel beschränkt sich dies auf die Anpassung von CSS Selektoren im `CONFIGS`-Abschnitt von `export-config.js`. Ich wäre Ihnen dankbar, wenn Sie mir die Anpassungen in einem Ticket zukommen lassen (z. B. als `diff`); ich kann dies dann in die Erweiterungspakete in den Shops übernehmen.
 
 # Probleme und Änderungswünsche
 
