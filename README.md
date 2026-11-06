@@ -1,9 +1,8 @@
 ---
 subject : "Browser Extensions"
-title : "Browser extension Copilot2Markdown"
-subtitle : "MS Copilot → Markdown"
+title : "Browser extension MS Copilot → Markdown"
+subtitle : "Project description"
 author : "ITSC IT Systems Consulting GmbH"
-abstract: "Exports Copilot chats into Markdown documents."
 keywords: ["Copilot", "Markdown"]
 lang: "en"
 ---
@@ -15,6 +14,10 @@ Language / Sprache:
 - 🇩🇪 [Deutsch](./README.de.md)
 
 Exports Copilot chats pretty formatted to PDF, HTML and Markdown.
+
+> [!tip]
+>
+> ***New in version 8.x:** Export the complete Copilot chat, including all conversation turns - no matter how many there are!*
 
 # Overview
 
@@ -43,6 +46,10 @@ The extension analyzes, processes, and cleans up the Copilot webpage, converting
 
 The extension then generates preview, PDF, and HTML files from the Markdown document.
 
+To prepare for an export, all "preview buttons" are clicked to reveal source code blocks and similar content.
+
+For a full export, the chat is scrolled through page by page, with the content of each page captured and compiled.
+
 # Features
 
 The generated outputs preserve all content and formatting from the chat:
@@ -59,16 +66,23 @@ The extension is available in the respective extension stores for the following 
 
 - Chromium / Google Chrome (via the [Chrome Web Store](https://chromewebstore.google.com/))
 - Firefox (via the [Mozilla Add-On Store](https://addons.mozilla.org))
-- MS Edge[^1]. However, the extension must be installed from the [Chrome Web Store](https://chromewebstore.google.com/).
+- MS Edge. However, the extension must be installed from the [Chrome Web Store](https://chromewebstore.google.com/).
 
-[^1]: MS Edge version 150 is buggy and does not allow any extensions for Microsoft sites like Copilot. Please ensure you use a newer or older version, or a different browser.
+## Full Export
+
+In the case of extensive chats, the Copilot web interface only loads a portion of the conversation into the browser; as you scroll or navigate through the chat, new sections are loaded, while those that are no longer visible are removed from the browser's memory (DOM).
+
+A standard export captures only the portion currently loaded in the browser - which is often perfectly sufficient, for instance, when you simply want to read through the conversation.
+
+However, if you need to export the entire chat for archival purposes, you must select the "full export" option from the menu.
+
+The full export process scrolls through the entire chat page by page, aggregates the content from each section, and uses a sophisticated algorithm to remove any duplicates.
 
 # Please note
 
-1. With extensive chats, the Copilot web interface sometimes loads only a portion of the conversation into the browser; as you scroll, newly visible parts are loaded, while parts that are no longer visible are removed from the browser's memory (DOM). **This extension can only export the parts that are currently loaded. Therefore, you may need to perform multiple exports to capture an entire chat.**
-2. Microsoft frequently changes the layout of the Copilot page. Although I have endeavored to make the export process as independent as possible from the page structure, CSS classes used, etc., changes made by Microsoft might cause the extension to fail to locate certain content or format it incorrectly.
-**In such a case, please create a ticket as described [below](#issues-and-feature-requests); I will do my best to update the extension as quickly as possible.**
-3. If you are a programmer, you can modify the source code yourself (see the ["Source code availability"](#source-code-availability) section); typically, this involves adjusting CSS selectors in the `CONFIGS` section of `export-config.js`. I would appreciate it if you could share your modifications with me via a ticket (e.g., as a `diff`); I can then incorporate them into the extension packages available in the shops.
+1. Microsoft frequently changes the layout of the Copilot page. Although I have endeavored to make the export process as independent as possible from the page structure, CSS classes used, etc., changes made by Microsoft might cause the extension to fail to locate certain content or format it incorrectly.
+  **In such a case, please create a ticket as described [below](#issues-and-feature-requests); I will do my best to update the extension as quickly as possible.**
+2. If you are a programmer, you can modify the source code yourself (see the ["Source code availability"](#source-code-availability) section); typically, this involves adjusting CSS selectors in the `CONFIGS` section of `export-config.js`. I would appreciate it if you could share your modifications with me via a ticket (e.g., as a `diff`); I can then incorporate them into the extension packages available in the shops.
 
 # Issues and Feature Requests
 
